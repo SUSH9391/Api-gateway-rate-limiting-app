@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(222, 84%, 4.9%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215.4, 16.3%, 46.9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222, 84%, 4.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222, 84%, 4.9%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --primary: hsl(222, 47%, 11%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(222, 84%, 4.9%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(222, 84%, 4.9%);
+  --destructive: hsl(0, 84%, 37%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(215, 20.2%, 65.1%);
+  --radius: 0.5rem;
+  
+  /* AWS-inspired colors */
+  --aws-blue: hsl(210, 66%, 13%);
+  --aws-orange: hsl(38, 100%, 50%);
+  --aws-bg: hsl(0, 0%, 98%);
+  --aws-success: hsl(134, 61%, 41%);
+  --aws-alert: hsl(0, 77%, 44%);
+  --aws-text: hsl(210, 66%, 13%);
+}
+
+.dark {
+  --background: hsl(222, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217, 32%, 17%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --popover: hsl(222, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217, 32%, 17%);
+  --input: hsl(217, 32%, 17%);
+  --primary: hsl(210, 40%, 98%);
+  --primary-foreground: hsl(222, 84%, 4.9%);
+  --secondary: hsl(217, 32%, 17%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(217, 32%, 17%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62%, 30%);
+  --destructive-foreground: hsl(0, 85%, 97%);
+  --ring: hsl(217, 32%, 17%);
+  --radius: 0.5rem;
+  
+  /* AWS-inspired colors for dark mode */
+  --aws-blue: hsl(210, 66%, 13%);
+  --aws-orange: hsl(38, 100%, 50%);
+  --aws-bg: hsl(222, 84%, 4.9%);
+  --aws-success: hsl(134, 61%, 41%);
+  --aws-alert: hsl(0, 77%, 44%);
+  --aws-text: hsl(210, 40%, 98%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background-color: var(--aws-bg);
+    color: var(--aws-text);
+  }
+}
+
+@layer utilities {
+  .aws-blue {
+    color: var(--aws-blue);
+  }
+  
+  .bg-aws-blue {
+    background-color: var(--aws-blue);
+  }
+  
+  .aws-orange {
+    color: var(--aws-orange);
+  }
+  
+  .bg-aws-orange {
+    background-color: var(--aws-orange);
+  }
+  
+  .aws-success {
+    color: var(--aws-success);
+  }
+  
+  .bg-aws-success {
+    background-color: var(--aws-success);
+  }
+  
+  .aws-alert {
+    color: var(--aws-alert);
+  }
+  
+  .bg-aws-alert {
+    background-color: var(--aws-alert);
+  }
+  
+  .aws-text {
+    color: var(--aws-text);
+  }
+  
+  .bg-aws-bg {
+    background-color: var(--aws-bg);
+  }
+}
